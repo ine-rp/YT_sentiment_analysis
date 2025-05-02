@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Sentiment Analyzer</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 40px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .results, .comments {
+            background: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-top: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Video Comments: Sentiment Analysis</h1>
+    <form method="POST">
+        <input type="text" name="video_url" placeholder="Enter YouTube video URL" required><br><br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <div class="results">
+            <h2>Sentiment Breakdown</h2>
+            <ul>
+                <li><span class="label">Positive:</span> {{ result.positive }}</li>
+                <li><span class="label">Neutral:</span> {{ result.neutral }}</li>
+                <li><span class="label">Negative:</span> {{ result.negative }}</li>
+            </ul>
+        </div>
+
+        <div class="comments">
+            <h3>Sample Comments</h3>
+            {% for category, comment_list in samples.items() %}
+                <h4>{{ category.capitalize() }}</h4>
+                <ul>
+                    {% for comment in comment_list %}
+                        <li>{{ comment }}</li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+    {% endif %}
+</body>
+</html>
+
