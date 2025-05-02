@@ -73,3 +73,5 @@ This project is part of my hands-on journey building applied machine learning pr
 
 Feel free to connect:
 https://www.linkedin.com/in/ines-rodriguez-piola
+https://www.instagram.com/inesthetechie
+https://www.x.com/inesthetechie
