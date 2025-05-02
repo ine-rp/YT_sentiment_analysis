@@ -72,6 +72,6 @@ I’m a software engineer with experience in mobile development and a growing fo
 This project is part of my hands-on journey building applied machine learning projects that connect models to real users.
 
 Feel free to connect:
-https://www.linkedin.com/in/ines-rodriguez-piola
-https://www.instagram.com/inesthetechie
-https://www.x.com/inesthetechie
+<br/>https://www.linkedin.com/in/ines-rodriguez-piola
+<br/>https://www.instagram.com/inesthetechie
+<br/>https://www.x.com/inesthetechie
